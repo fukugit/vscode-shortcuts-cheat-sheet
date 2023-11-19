@@ -25,9 +25,6 @@
 <script setup>
 import { ref } from 'vue';
 import draggable from 'vuedraggable';
-// draggable.compatConfig = {
-//   MODE: 3
-// }
 const list = ref(['AAA', 'BBBBBBB', 'CCCCCCCCCCCC', 'DDDDDDDDDDDDDDDDDDDD']);
 
 </script>

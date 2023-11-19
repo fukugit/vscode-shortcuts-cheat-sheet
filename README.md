@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## libraries
+[vue.draggable.next](https://github.com/SortableJS/vue.draggable.next)
+[bootstrap-vue-next](https://bootstrap-vue-next.github.io/bootstrap-vue-next/)
+[Bootstrap 5](https://www.npmjs.com/package/bootstrap)
