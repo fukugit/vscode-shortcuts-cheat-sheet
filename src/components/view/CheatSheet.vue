@@ -1,22 +1,17 @@
 <template>
-  <draggable
+
+  <img alt="Vue logo" src="../../assets/logo.png">
+
+  <draggable 
+    v-model="list" 
+    group="people" 
     class="list-group"
-    tag="transition-group"
-    :component-data="{
-      tag: 'ul',
-      type: 'transition-group',
-      name: !drag ? 'flip-list' : null
-    }"
-    v-model="list"
-    @start="drag = true"
-    @end="drag = false"
-    item-key="order"
-    :animation="200"
-  >
-    <template #item="{ element }">
-      <div class="list-group-item" :class="{ 'not-draggable': !enabled }">
-        {{ element }}
-      </div>
+    @start="drag=true" 
+    @end="drag=false" 
+    item-key="id"
+    :animation="200">
+    <template #item="{element}">
+      <ul><li class="m1 item">{{element.name}}, {{element.id}}</li></ul>
     </template>
   </draggable>
 
@@ -25,7 +20,11 @@
 <script setup>
 import { ref } from 'vue';
 import draggable from 'vuedraggable';
-const list = ref(['AAA', 'BBBBBBB', 'CCCCCCCCCCCC', 'DDDDDDDDDDDDDDDDDDDD']);
+const list = ref([
+  {"name": "AAA","id": 1},
+  {"name": "BBBBBBB","id": 2},
+  {"name": "CCCCCCCCCCCCC","id": 3},
+]);
 
 </script>
 
@@ -49,8 +48,12 @@ const list = ref(['AAA', 'BBBBBBB', 'CCCCCCCCCCCC', 'DDDDDDDDDDDDDDDDDDDD']);
 
 .list-group {
   min-height: 20px;
+  background-color: red;
 }
-
+.item {
+  background-color: yellow;
+  cursor: move;
+}
 .list-group-item {
   cursor: move;
 }
