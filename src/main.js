@@ -3,8 +3,8 @@ import App from './App.vue'
 import router from './router.js'
 
 import BootstrapVueNext from 'bootstrap-vue-next'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
+import "./assets/scss/bootstrap-custom.scss"
+import 'animate.css';
 
 createApp(App)
   .use(BootstrapVueNext)

@@ -1,20 +1,29 @@
 <template>
 
-  <img alt="Vue logo" src="../../assets/logo.png">
+  <div class="container mt-1">
+    <router-link
+      to="/js"
+    >
+      <p>js</p>
+    </router-link>
+    
+    <img alt="Vue logo" src="../../assets/logo.png">
 
-  <draggable 
-    v-model="list" 
-    group="people" 
-    class="list-group"
-    @start="drag=true" 
-    @end="drag=false" 
-    item-key="id"
-    :animation="200">
-    <template #item="{element}">
-      <ul><li class="m1 item">{{element.name}}, {{element.id}}</li></ul>
-    </template>
-  </draggable>
+    <draggable 
+      v-model="list" 
+      group="people" 
+      class="list-group"
+      @start="drag=true" 
+      @end="drag=false" 
+      item-key="id"
+      :animation="200">
+      <template #item="{element}">
+        <ul><li class="m1 item">{{element.name}}, {{element.id}}</li></ul>
+      </template>
+    </draggable>
 
+    <div class="mt-5"></div>
+  </div>
 </template>
 
 <script setup>
