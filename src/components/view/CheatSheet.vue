@@ -4,7 +4,7 @@
     <router-link
       to="/js"
     >
-      <p>js</p>
+      <p>js!!</p>
     </router-link>
     
     <img alt="Vue logo" src="../../assets/logo.png">
