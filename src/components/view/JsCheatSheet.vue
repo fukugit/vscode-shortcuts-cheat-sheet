@@ -50,4 +50,7 @@ const add = (()=>{
 .animate__delay-02s {
     animation-delay: 0.2s;
 }
+.animate__rubberBand {
+  --animate-duration: 1s;
+}
 </style>
